@@ -5,6 +5,11 @@
     "aws-cdk": "bin/aws-cdk.js"
   },
   "scripts": {
+    "cdk-synth": "cdk synth",
+    "build-react": "cd ../react-shop && npm run build",
+    "deploy-react": "npm run build-react && npm run cdk-synth && npm run cdk-deploy",
+    "cdk-deploy": "cdk deploy",
+    "destroy": "cdk destroy",
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
